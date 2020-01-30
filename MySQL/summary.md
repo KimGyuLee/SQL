@@ -38,8 +38,10 @@
   
   - 명령어
 
-    
-    mysql> CREATE DATABASE dbname;
+'''
+mysql> CREATE DATABASE dbname;
+'''
+
 
   
 
