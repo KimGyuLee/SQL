@@ -38,9 +38,9 @@
   
 ~~~sql
 CREATE DATABASE dbname;  # 생성  (= CREATE SCHEMA dbname;)  
-SHOW DATABASES;  # 데이터베이스 목록 보기
-DROP DATABASE (IF EXISTS) dbname;   # 데이터베이스 삭제 (if exists는 생략 가능)  
-USE dbname;  # 데이터베이스 사용
+SHOW DATABASES;  # 데이터베이스 목록 보기  
+DROP DATABASE (IF EXISTS) dbname;   # 데이터베이스 삭제 (if exists는 생략 가능)   
+USE dbname;  # 데이터베이스 사용  
 ~~~~
 
   ![WORKBENCH화면](https://user-images.githubusercontent.com/58073455/73460812-712e6500-43bc-11ea-8208-7a8facfa6eb6.PNG)  
