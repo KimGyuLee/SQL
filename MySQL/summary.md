@@ -1,22 +1,22 @@
-1. RDBMS
+RDBMS
 ----------------------------
 
 
-2. Create-Databases  
+Create-Databases  
 ----------------------------
 
 
-3. Handling-Databases  
+Handling-Databases  
 ----------------------------
 
-4. MySQL-in-Python  
-----------------------------
-
-
-5. Crawling-and-MySQL  
+MySQL-in-Python  
 ----------------------------
 
 
-6. SQL-for-Data-Analysis  
+Crawling-and-MySQL  
+----------------------------
+
+
+SQL-for-Data-Analysis  
 ----------------------------
 
