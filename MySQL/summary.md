@@ -45,9 +45,9 @@
 * **테이블 만들기**
   - USE dbname; 명령 후 테이블을 만들어야 한다.
 
-'''sql
+~~~sql
 CREATE TABLE table_name(field_name data_type primary_key);
-'''
+~~~
 
 
 
