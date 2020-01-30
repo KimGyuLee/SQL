@@ -67,26 +67,44 @@ CREATE TABLE table_name (
  EX.
 ~~~sql
 CREATE TABLE myproduct (
-    KEY INT,
+    MYKEY INT (UNSIGNED) (NOT NULL) (AUTO_INCREMENT),
+    # UNSIGNED는 음수를 저장할 수 없는 대신 양수를 더 높은 수까지 저장할 수 있다. 보통 PRIMARY KEY가 되는 필드는 UNSIGNED인 경우가 많다.
+    # NOT NULL는 해당 필드에 값이 할당되지 않는 경우를 허락하지 않겠다는 의미이다.
+    # AUTO_INCREMENT는 현재까지 저장되어있는 레코드 중 PRIMARY KEY 값이 가장 큰 것에 1을 더하는 것을 의미한다. (새로운 레코드가 들어왔을 때, 자동으로 PRIMARY KEY 값을 지정해주기 위함이다.)
     ID TEXT,
     TITLE TEXT,
     ORI_PRICE INT,
     DISCOUNT_PRICE INT,
     DELEVERY TEXT,
-    PRIMARY_KEY (KEY)  # 괄호안에 PRIMARY KEY가 될 필드명을 넣는다.
+    PRIMARY KEY (MYKEY)  # 괄호안에 PRIMARY KEY가 될 필드명을 넣는다. PRIMARY KEY는 NULL값이 들어가면 안된다.
     );
 ~~~~  
 
-  - **데이터 타입**  
+* **데이터 타입**  
   
   ![숫자형데이터타입](https://user-images.githubusercontent.com/58073455/73470547-67602e00-43cb-11ea-8405-02c55d568d69.png)  
   ![문자형데이터타입](https://user-images.githubusercontent.com/58073455/73470586-73e48680-43cb-11ea-86c3-1ba10625668d.png)  
   ![시간형데이터타입](https://user-images.githubusercontent.com/58073455/73470613-7c3cc180-43cb-11ea-9b9c-4cff254b9b2e.png)  
   
-  
+
+* **테이블 보기/삭제**
+
+~~~sql
+SHOW TABLES;  # 테이블 보기
+~~~  
+
+~~~sql
+DROP TABLE table_name;  # 테이블 삭제
+~~~  
+
+![워크벤치2](https://user-images.githubusercontent.com/58073455/73471870-692af100-43cd-11ea-8670-d2a4b6538e9b.PNG)
 
 
-  
+~~~sql
+DESC table_name;  # 테이블의 구조 보기
+~~~~  
+
+
 
 
 3.Handling-Databases  - SQL 기초 문법의 이해 (데이터 다루기)
