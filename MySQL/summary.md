@@ -68,12 +68,12 @@ CREATE TABLE table_name (
 ~~~sql
 CREATE TABLE myproduct (
     KEY INT,
-    ID STRING,
-    TITLE STRING,
+    ID TEXT,
+    TITLE TEXT,
     ORI_PRICE INT,
     DISCOUNT_PRICE INT,
-    DELEVERY STRING,
-    PRIMARY_KEY KEY
+    DELEVERY TEXT,
+    PRIMARY_KEY (KEY)  # 괄호안에 PRIMARY KEY가 될 필드명을 넣는다.
     );
 ~~~~  
 
