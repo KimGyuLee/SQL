@@ -104,9 +104,22 @@ DESC table_name;  # 테이블의 구조 보기
 ![워크벤치2](https://user-images.githubusercontent.com/58073455/73472780-ef940280-43ce-11ea-9275-1d1fd8688b63.PNG)
 
 
+* **테이블 구조 수정**
 
+~~~sql
+ALTER TABLE database_name ADD COLUMN column_name # 테이블에 새로운 컬럼(필드) 추가
+~~~
 
+~~~sql
+# 테이블 컬럼(필드) 타입 변경
+~~~
 
+~~~sql
+# 테이블 컬럼(필드) 이름 변경
+~~~
+
+~~~sql
+~~~
 
 
 3.Handling-Databases  - SQL 기초 문법의 이해 (데이터 다루기)
