@@ -38,11 +38,14 @@
   
 ~~~sql
 CREATE DATABASE dbname;  # 생성  (= CREATE SCHEMA dbname;)  
-
+~~~~
+~~~sql
 SHOW DATABASES;  # 데이터베이스 목록 보기  
-
+~~~~
+~~~sql
 DROP DATABASE (IF EXISTS) dbname;   # 데이터베이스 삭제 (if exists는 생략 가능)   
-
+~~~~
+~~~sql
 USE dbname;  # 데이터베이스 사용  
 ~~~~
 
