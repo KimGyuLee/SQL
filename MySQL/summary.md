@@ -97,12 +97,14 @@ SHOW TABLES;  # 테이블 보기
 DROP TABLE table_name;  # 테이블 삭제
 ~~~  
 
-![워크벤치2](https://user-images.githubusercontent.com/58073455/73471870-692af100-43cd-11ea-8670-d2a4b6538e9b.PNG)
-
-
 ~~~sql
 DESC table_name;  # 테이블의 구조 보기
 ~~~~  
+
+![워크벤치2](https://user-images.githubusercontent.com/58073455/73472780-ef940280-43ce-11ea-9275-1d1fd8688b63.PNG)
+
+
+
 
 
 
