@@ -34,16 +34,21 @@
 
 * **데이터베이스 만들기**
   - 데이터베이스 안에는 여러 개의 데이터베이스 이름이 존재한다.
-  - 각 데이터베이스 이름 안에는 여러 개의 테이블이 존재한다.
+  - 각 데이터베이스 이름 안에는 여러 개의 테이블이 존재한다.  
   
-  - workbench 명령어 실행
-    - CREATE DATABASE dbname;  생성  (= CREATE SCHEMA dbname;)
-    - SHOW DATABASES;  데이터베이스 목록 보기
-    - DROP DATABASE (IF EXISTS) dbname;   데이터베이스 삭제 (if exists는 생략 가능)  
-    - USE dbname;  데이터베이스 사용
+  - CREATE DATABASE dbname;  생성  (= CREATE SCHEMA dbname;)
+  - SHOW DATABASES;  데이터베이스 목록 보기
+  - DROP DATABASE (IF EXISTS) dbname;   데이터베이스 삭제 (if exists는 생략 가능)  
+  - USE dbname;  데이터베이스 사용
   ![WORKBENCH화면](https://user-images.githubusercontent.com/58073455/73460812-712e6500-43bc-11ea-8208-7a8facfa6eb6.PNG)  
   
 * **테이블 만들기**
+  - USE dbname; 명령 후 테이블을 만들어야 한다.
+
+'''sql
+CREATE TABLE table_name(field_name data_type primary_key);
+'''
+
 
 
 
