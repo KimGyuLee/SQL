@@ -39,9 +39,10 @@
   - 명령어
 
 
-'''sql
-mysql> CREATE DATABASE dbname;
 '''
+CREATE DATABASE dbname;
+'''
+
 
 
   
