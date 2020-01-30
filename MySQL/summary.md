@@ -6,7 +6,12 @@
 - 최근에는 빅데이터를 다루는 영역에서 MongoDB, Redis, Hive, HBase와 같은 DBMS가 사용되기도 한다.  
 - 데이터베이스 대신 Elasticsearch, Solr와 같은 검색 엔진을 사용하는 경우도 있다.  
 (source: https://db-engines.com/en/ranking)  
+- SQL 언어를 익히면 RDBMS에 속하는 모든 데이터베이스를 사용할 수 있다.
 
+* **RDBMS 구조의 이해**
+  - RDBMS = Relational Database Management System = 관계형 데이터베이스 관리 시스템
+  - 관계형 데이터베이스 = 테이블
+  - RDBMS는 테이블을 만들어서 그 안에 여러 항목들을 정의한 후, 테이블간의 관계를 설정해서 데이터를 관리하는 방식이다.
 
 
 2.Create-Databases  - SQL 기초 문법의 이해 (데이터베이스 만들기)
