@@ -9,7 +9,7 @@
 1-6. SQL-for-Data-Analysis  
 
 
-### 2. [SQL-for-Marketer]()  
+### 2. [SQL-for-Marketer](https://github.com/KimGyuLee/SQL/blob/master/SQL-for-Marketer/summary.md)  
 
 
 ### 3. [SQLD (SQL-Developer)]()  
