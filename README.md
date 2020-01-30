@@ -1,6 +1,6 @@
 # SQL
 
-1. SQL/DB (MySQL)  
+1. [SQL/DB (MySQL)](https://github.com/KimGyuLee/SQL/blob/master/MySQL/summary.md)  
 1-1. RDBMS  
 1-2. Create-Databases  
 1-3. Handling-Databases  
