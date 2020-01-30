@@ -60,7 +60,7 @@ USE dbname;  # 데이터베이스 사용
 ~~~sql
 CREATE TABLE table_name (
     field_name data_type, 
-    primary_key
+    primary_key KEY
     );
 ~~~    
  
@@ -76,6 +76,14 @@ CREATE TABLE myproduct (
     PRIMARY_KEY KEY
     );
 ~~~~  
+
+  - **데이터 타입**
+  ![숫자형데이터타입](https://user-images.githubusercontent.com/58073455/73470547-67602e00-43cb-11ea-8405-02c55d568d69.png)
+  ![문자형데이터타입](https://user-images.githubusercontent.com/58073455/73470586-73e48680-43cb-11ea-86c3-1ba10625668d.png)
+  ![시간형데이터타입](https://user-images.githubusercontent.com/58073455/73470613-7c3cc180-43cb-11ea-9b9c-4cff254b9b2e.png)
+  
+  
+
 
   
 
