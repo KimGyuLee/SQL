@@ -107,19 +107,27 @@ DESC table_name;  # 테이블의 구조 보기
 * **테이블 구조 수정**
 
 ~~~sql
-ALTER TABLE database_name ADD COLUMN column_name # 테이블에 새로운 컬럼(필드) 추가
+# 테이블에 새로운 컬럼(필드) 추가
+ALTER TABLE table_name ADD COLUMN column_name # [추가할 컬럼명][추가할 컬럼 데이터형]
 ~~~
 
 ~~~sql
 # 테이블 컬럼(필드) 타입 변경
+ALTER TABLE table_name MODIFY COLUMN column_name # [변경할 컬럼명][변경할 컬럼 데이터형]
 ~~~
 
 ~~~sql
 # 테이블 컬럼(필드) 이름 변경
+ALTER TABLE table_name CHANGE COLUMN [변경할 컬럼명][변경할 컬럼명][변경할 컬럼 데이터형]
+# 컬럼명과 데이터형을 한번에 바꿀 수 있다.
 ~~~
 
 ~~~sql
+# 테이블 컬럼(필드) 삭제
+ALTER TABLE table_name DROP column_name
 ~~~
+
+![워크벤치3](https://user-images.githubusercontent.com/58073455/73475114-13594780-43d3-11ea-89aa-d5f13bcb92b1.PNG)
 
 
 3.Handling-Databases  - SQL 기초 문법의 이해 (데이터 다루기)
