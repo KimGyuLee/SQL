@@ -134,13 +134,13 @@ ALTER TABLE table_name DROP column_name
 ----------------------------
 ## 데이터 생성
 ~~~sql
-SHOW DATABASES;
+SHOW DATABASES; # 데이터베이스 보기
 
-USE dbname;
+USE dbname;  # 데이터베이스 중 하나 선택하기
 
-SHOW TABLES;
+SHOW TABLES;  # 데이터베이스 내 테이블 보기
 
-DESC table_name;
+DESC table_name;  # 테이블 구조 보기 
 
 INSERT INTO table_name VALUES(1, 'i7', '7700', 'Kaby Lake'); # 각 컬럼에 들어갈 value 입력
 
