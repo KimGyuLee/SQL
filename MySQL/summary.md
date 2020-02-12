@@ -132,7 +132,21 @@ ALTER TABLE table_name DROP column_name
 
 3.Handling-Databases  - SQL 기초 문법의 이해 (데이터 다루기)
 ----------------------------
+## 데이터 생성
+~~~sql
+SHOW DATABASES;
 
+USE dbname;
+
+SHOW TABLES;
+
+DESC table_name;
+
+INSERT INTO table_name VALUES(1, 'i7', '7700', 'Kaby Lake'); # 각 컬럼에 들어갈 value 입력
+
+INSERT INTO mytable (name, model_num, model_type) VALUES('i7', '7700K', 'Kaby Lake');
+# id를 auto_increment로 지정해놓았을 경우, id를 제외하고 입력하면 id는 저절로 생성됨
+~~~
 
 
 4.MySQL-in-Python -   
