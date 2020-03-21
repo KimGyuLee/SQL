@@ -20,7 +20,7 @@ USE dbname;  # 테이블을 만들기 전에, 테이블을 만들 어떤 데이�
 # 테이블에서 Primary key가 될 필드를 지정해줘야 한다
 
 CREATE TABLE tablename (
- ID INT,
+ ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
  TITLE TEXT,
  ORI_PRICE INT,
  DISCOUNT_PRICE INT,
@@ -28,10 +28,15 @@ CREATE TABLE tablename (
  );
 
 # 데이터형으로 FLOAT, DOUBLE, INT, TEXT를 많이 쓴다
+# UNSIGNED : 음수 값을 넣지 못하는 대신, 양수 값을 더 많이 넣을 수 있다. PRIMARY KEY 값의 경우 많이 한다.
+# NOT NULL : NULL값이 되면 안된다는 것, 반드시 어떤 값이 들어가야한다는 것이다. PRIMARY KEY는 자동으로 NOT NULL이 된다.
+# AUTO_INCREMENT : 최근 값(가장 큰 값)에 1을 자동으로 더해서 값을 지정해준다. (1, 2, 3 --> 4)
 
 SHOW TABLES;  # 테이블 확인하기
 
 DROP TABLE myproduct;  # 테이블 삭제하기
+
+DESC myproduct;  # 테이블 구조 확인하기C
 ~~~
 
 
