@@ -28,6 +28,10 @@ CREATE TABLE tablename (
  );
 
 # 데이터형으로 FLOAT, DOUBLE, INT, TEXT를 많이 쓴다
+
+SHOW TABLES;  # 테이블 확인하기
+
+DROP TABLE myproduct;  # 테이블 삭제하기
 ~~~
 
 
