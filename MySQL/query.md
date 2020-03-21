@@ -39,6 +39,10 @@ DROP TABLE myproduct;  # 테이블 삭제하기
 DESC myproduct;  # 테이블 구조 확인하기C
 ~~~
 
+### 테이블 변경하기
+~~~sql
 
+
+~~~
 
 
