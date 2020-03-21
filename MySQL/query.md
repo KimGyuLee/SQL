@@ -1,6 +1,6 @@
 인프런 SQL/DB(MySQL)  
 -------------------------------------------------------------------
-*TOOL : WorkBench
+*Tool : WorkBench
 
 ### 데이터베이스 만들기
 ~~~sql
@@ -20,13 +20,14 @@ USE dbname;  # 테이블을 만들기 전에, 테이블을 만들 어떤 데이�
 # 테이블에서 Primary key가 될 필드를 지정해줘야 한다
 
 CREATE TABLE tablename (
-  KEY INT,
-  ID STRING,
-  TITLE STRING,
-  ORI_PRICE INT,
-  DISCOUNT_PRICE INT,
-  PRIMARY_KEY KEY
-  );
+ ID INT,
+ TITLE TEXT,
+ ORI_PRICE INT,
+ DISCOUNT_PRICE INT,
+ PRIMARY KEY (ID)
+ );
+
+# 데이터형으로 FLOAT, DOUBLE, INT, TEXT를 많이 쓴다
 ~~~
 
 
