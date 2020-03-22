@@ -43,6 +43,9 @@ DESC myproduct;  # 테이블 구조 확인하기C
 
 ### 테이블 변경하기
 ~~~sql
+ALTER TABLE tablename ADD COLUMN columnname VARCHAR(10) NOT NULL;  # 컬럼 추가하기
+
+ALTER TABLE tablename MODIFY COLUMN columnname VARCHAR(20) NOT NULL;  # 컬럼의 데이터 타입 변경하기
 
 
 ~~~
