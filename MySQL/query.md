@@ -56,7 +56,7 @@ ALTER TABLE tablename DROP COLUMN columnname;  # 컬럼 삭제하기
 
 
 ## 섹션 3. SQL 기초 문법의 이해 (데이터 다루기)
-- CRUD : CREATE(생성), READ(읽기), UPDATE(갱신), DELETE(삭제)
+- CRUD : CREATE(생성), READ(읽기), UPDATE(수정), DELETE(삭제)
 
 ### 데이터 입력하기
 ~~~sql
@@ -103,9 +103,37 @@ SELECT * FROM tablename LIMIT 2, 2;  # 3번째부터 2개 보여주기
 
 #### 조건 조합 시 순서
 SELECT FROM WHERE ORDER BY LIMIT
+~~~sql
+SELECT id, name FROM mytable WHERE id < 4 AND name LIKE '%i%' ORDER BY name DESC LIMIT 2;
+~~~
 
+### 데이터 수정하기
+~~~sql
+UPDATE mytable SET columnname = 'i3', columnname = '5500k' WHERE columnname = 3;  # 조건에 맞는 데이터의 값 수정하기
+~~~
 
+### 데이터 삭제하기
+~~~sql
+DELETE FROM mytable WHERE columnname = 1;  # 조건에 맞는 데이터 삭제하기
+~~~
 
+## 섹션 4. 파이썬으로 다루는 MySQL
+- library : PyMySQL 
+
+### PyMySQL 시작
+~~~python
+import pymysql
+
+db = pymysql.connect(host='localhost', port=3306, 
+user='root', passwd='abcde', db='ecommerce', charset='utf8')
+
+# host : 접속할 mysql server 주소
+# port : 접속할 mysql server 의 포트 번호
+# user : mysql ID
+# passwd : mysql ID의 암호
+# db : 접속할 데이터베이스
+# charset='utf8' : 한글이 깨질 수 있으므로 연결 설정에 넣어줌
+~~~
 
 
 
