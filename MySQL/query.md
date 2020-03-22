@@ -62,11 +62,33 @@ ALTER TABLE tablename DROP COLUMN columnname;  # 컬럼 삭제하기
 ~~~sql
 INSERT INTO tablename VALUES (1, 'i7', '7700', 'Kaby Lake');  # 컬럼 순서대로 값 입력하기 (모든 컬럼에 값 지정)
 
-SELECT * FROM tablename;  # 테이블 내 모든 값 읽기 (SELECT : 읽기 / * : 모든 컬럼)
-
 INSERT INTO mytable (name, model_num, model_type) VALUES('i7', '7700k', 'Kaby Lake');  
 # 원하는 컬럼에만 값 입력하기 (id 값은 자동으로 입력되므로 입력하지 않음)
 ~~~
+
+### 데이터 검색하기(읽기)
+~~~sql
+SELECT * FROM tablename;  # 테이블 내 모든 값 읽기 (SELECT : 읽기 / * : 모든 컬럼)
+
+SELECT columnname FROM tablename;  # 해당 컬럼만 읽기
+
+SELECT columnname1, columnname2 FROM tablename;  # 컬럼 여러개 선택해서 읽기
+
+SELECT columnname AS 표시이름 FROM tablename;  # 해당 컬럼을 내가 원하는 이름으로 표시해서 읽기
+
+SELECT columnname1 AS 표시이름1, columnname2 AS 표시이름2 FROM tablename;  # 컬럼 여러개를 내가 원하는 이름으로 표시해서 읽기
+~~~
+
+~~~sql
+SELECT columnname FROM tablename ORDER BY id ASC;  # 지정 컬럼 기준 오름차순 정렬 (문자열로 된 컬럼을 기준으로 하는 것도 가능)
+
+SELECT columnname FROM tablename ORDER BY id DESC;  # 지정 컬럼 기준 내림차순 정렬
+~~~
+
+~~~sql
+SELECT * FROM mytable WHERE columnname = 'i5' OR columnname2 = 'i7';  # 조건에 맞는 행 가져오기
+~~~
+
 
 
 
