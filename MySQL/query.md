@@ -60,9 +60,15 @@ ALTER TABLE tablename DROP COLUMN columnname;  # 컬럼 삭제하기
 
 ### 데이터 입력하기
 ~~~sql
+INSERT INTO tablename VALUES (1, 'i7', '7700', 'Kaby Lake');  # 컬럼 순서대로 값 입력하기 (모든 컬럼에 값 지정)
 
+SELECT * FROM tablename;  # 테이블 내 모든 값 읽기 (SELECT : 읽기 / * : 모든 컬럼)
 
+INSERT INTO mytable (name, model_num, model_type) VALUES('i7', '7700k', 'Kaby Lake');  
+# 원하는 컬럼에만 값 입력하기 (id 값은 자동으로 입력되므로 입력하지 않음)
 ~~~
+
+
 
 
 
