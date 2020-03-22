@@ -258,7 +258,7 @@ import pandas as pd
 host_name = 'localhost'
 host_port = 3306
 username = 'root'
-password = 'gksk1023!'
+password = 'abcd'
 database_name = 'student_mgmt'
 
 db = pymysql.connect(
