@@ -47,7 +47,9 @@ ALTER TABLE tablename ADD COLUMN columnname VARCHAR(10) NOT NULL;  # 컬럼 추�
 
 ALTER TABLE tablename MODIFY COLUMN columnname VARCHAR(20) NOT NULL;  # 컬럼의 데이터 타입 변경하기
 
+ALTER TABLE tablename CHANGE COLUMN columnname(원래이름) newname(새로운이름) VARCHAR(10);  # 컬럼명, 컬럼의 데이터 타입 변경하기
 
+ALTER TABLE tablename DROP COLUMN columnname;  # 컬럼 삭제하기
 ~~~
 
 
