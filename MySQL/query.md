@@ -86,7 +86,11 @@ SELECT columnname FROM tablename ORDER BY id DESC;  # 지정 컬럼 기준 내�
 ~~~
 
 ~~~sql
-SELECT * FROM mytable WHERE columnname = 'i5' OR columnname2 = 'i7';  # 조건에 맞는 행 가져오기
+SELECT * FROM mytable WHERE columnname = 'i5' OR columnname2 = 'i7';  # 조건에 맞는 데이터 가져오기
+
+SELECT * FROM tablename WHERE columnname LIKE '%7%';  # 부분적으로 일치하는 데이터 가져오기 (7을 포함한 경우)
+
+SELECT * FROM tablename WHERE columnname LIKE '7__';  # 부분적으로 일치하는 데이터 가져오기 (7로 시작하고 뒤에 두글자가 붙는 경우)
 ~~~
 
 
