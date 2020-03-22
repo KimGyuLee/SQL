@@ -39,6 +39,8 @@ DROP TABLE myproduct;  # 테이블 삭제하기
 DESC myproduct;  # 테이블 구조 확인하기C
 ~~~
 
+![캡처](https://user-images.githubusercontent.com/58073455/77239926-83da5300-6c23-11ea-996d-103a53f577bd.PNG)
+
 ### 테이블 변경하기
 ~~~sql
 
