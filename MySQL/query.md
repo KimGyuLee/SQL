@@ -173,6 +173,82 @@ db.commit()  # 삽입, 갱신, 삭제 등이 끝났으면 실행 mysql 서버에
 db.close()
 ~~~
 
+### PyMySQL - 데이터 입력과 검색
+**1. 데이터 입력 (INSERT)**
+~~~python
+import pymysql
+
+db = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='abcd', db='ecommerce', charset='utf8')
+
+cursor = db.cursor()
+
+for index in range(10):
+    product_code = 215673140 + index + 1
+    sql = """INSERT INTO product VALUES(
+    '""" + str(product_code) + """', '스위트바니 여름신상', 23000, 6900, 70, 'F'); """
+    cursor.execute(sql)
+
+db.commit()
+db.close()
+~~~
+
+**2. 데이터 검색 (SELECT)**
+~~~python
+import pymysql
+
+db = pymysql.connect(host='localhost', port=3306, user='root', passwd='abcd', db='ecommerce', charset='utf8')
+cursor = db.cursor()
+sql = "SELECT * FROM product"
+cursor.execute(sql)
+
+result = cursor.fetchone()
+
+# fetchall(): Fetch all the rows
+# fetchmany(size=None): Fetch several rows
+# fetchone(): Fetch the next row
+
+print(result)
+db.close()
+~~~
+
+### PyMySQL - 데이터 수정
+**3. 데이터 수정 (UPDATE)**
+~~~python
+import pymysql
+
+db = pymysql.connect(host='localhost', port=3306, user='root', passwd='abcd', db='ecommerce', charset='utf8')
+
+cursor = db.cursor()
+
+SQL = """
+UPDATE product SET 
+    TITLE='달리샵린넨원피스 뷔스티에 썸머 가디건 코디전', 
+    ORI_PRICE=33000, 
+    DISCOUNT_PRICE=9900, 
+    DISCOUNT_PERCENT=70 
+    WHERE PRODUCT_CODE='215673141'
+"""
+
+cursor.execute(SQL)
+db.commit()
+db.close()
+~~~
+
+
+**4. 데이터 삭제 (DELETE)**
+~~~python
+import pymysql
+
+db = pymysql.connect(host='localhost', port=3306, user='root', passwd='abcd', db='ecommerce', charset='utf8')
+
+cursor = db.cursor()
+
+SQL = """DELETE FROM product WHERE PRODUCT_CODE='215673142'"""
+
+cursor.execute(SQL)
+db.commit()
+db.close()
+~~~
 
 
 
