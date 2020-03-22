@@ -95,6 +95,18 @@ SELECT * FROM tablename WHERE columnname LIKE '7__';  # 부분적으로 일치�
 SELECT * FROM tablename WHERE columnname LIKE '7__' AND columnname2 Like '%6%';  # 부분적으로 일치하는 데이터 가져오기
 ~~~
 
+~~~sql
+SELECT * FROM tablename LIMIT 5;  # 위에서부터 5개만 보여주기
+
+SELECT * FROM tablename LIMIT 2, 2;  # 3번째부터 2개 보여주기
+~~~
+
+#### 조건 조합 시 순서
+SELECT FROM WHERE ORDER BY LIMIT
+
+
+
+
 
 
 
