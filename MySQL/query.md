@@ -91,6 +91,8 @@ SELECT * FROM mytable WHERE columnname = 'i5' OR columnname2 = 'i7';  # 조건�
 SELECT * FROM tablename WHERE columnname LIKE '%7%';  # 부분적으로 일치하는 데이터 가져오기 (7을 포함한 경우)
 
 SELECT * FROM tablename WHERE columnname LIKE '7__';  # 부분적으로 일치하는 데이터 가져오기 (7로 시작하고 뒤에 두글자가 붙는 경우)
+
+SELECT * FROM tablename WHERE columnname LIKE '7__' AND columnname2 Like '%6%';  # 부분적으로 일치하는 데이터 가져오기
 ~~~
 
 
