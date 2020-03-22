@@ -56,5 +56,28 @@ ALTER TABLE tablename DROP COLUMN columnname;  # 컬럼 삭제하기
 
 
 ## 섹션 3. SQL 기초 문법의 이해 (데이터 다루기)
+- CRUD : CREATE(생성), READ(읽기), UPDATE(갱신), DELETE(삭제)
 
-### 
+### 데이터 입력하기
+~~~sql
+
+
+~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
