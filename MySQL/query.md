@@ -118,22 +118,63 @@ DELETE FROM mytable WHERE columnname = 1;  # 조건에 맞는 데이터 삭제�
 ~~~
 
 ## 섹션 4. 파이썬으로 다루는 MySQL
-- library : PyMySQL 
+- library : PyMySQL (mysql을 python에서 사용할 수 있는 라이브러리)
 
 ### PyMySQL 시작
+**1. pymysql.connect() 메소드를 사용하여 MySQL에 연결**
 ~~~python
-import pymysql
+import pymysql  # 라이브러리 가져오기
 
+# MySQL에 연결
 db = pymysql.connect(host='localhost', port=3306, 
 user='root', passwd='abcde', db='ecommerce', charset='utf8')
 
-# host : 접속할 mysql server 주소
-# port : 접속할 mysql server 의 포트 번호
+db  # <pymysql.connections.Connection at 0x1c09bb07ec8>
+
+# host : 접속할 mysql server 주소 ('localhost' : 자기 pc에 접속함)
+# port : 접속할 mysql server 의 포트 번호 (3306 : mysql의 디폴트 port 번호)
 # user : mysql ID
 # passwd : mysql ID의 암호
 # db : 접속할 데이터베이스
 # charset='utf8' : 한글이 깨질 수 있으므로 연결 설정에 넣어줌
 ~~~
+
+**2. Connection 객체로부터 cursor() 메소드를 호출하여 Cursor 객체를 가져옴 (커서 가져오기)**
+~~~python
+ecommerce = db.cursor()
+
+ecommerce  # <pymysql.cursors.Cursor at 0x1c09bb24888>
+~~~
+
+**3. Cursor 객체의 execute() 메소드를 사용하여 SQL 문장을 DB 서버에 전송 (SQL 구문 만들기)**
+~~~python
+sql = """
+    CREATE TABLE product (
+        PRODUCT_CODE VARCHAR(20) NOT NULL,
+        TITLE VARCHAR(200) NOT NULL,
+        ORI_PRICE INT,
+        DISCOUNT_PRICE INT,
+        DISCOUNT_PERCENT INT,
+        DELIVERY VARCHAR(2),
+        PRIMARY KEY(PRODUCT_CODE)
+    );
+"""
+
+ecommerce.execute(sql)
+~~~
+
+**4. Connection 객체의 commit() 메소드를 사용하여 데이터를 Commit (DB에 Complete 하기)**
+~~~python
+db.commit()  # 삽입, 갱신, 삭제 등이 끝났으면 실행 mysql 서버에 확정 반영함
+~~~
+
+**5. Connection 객체의 close() 메소드를 사용하여 DB 연결을 닫음**
+~~~python
+db.close()
+~~~
+
+
+
 
 
 
